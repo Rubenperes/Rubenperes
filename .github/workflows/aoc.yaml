@@ -1,0 +1,23 @@
+name: Update AoC Stars Badge
+
+on:
+  schedule:
+    - cron: '6 5 1-25 12 *'  # du 1 au 25 décembre à 5:06 UTC
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: joblo2213/aoc-badges-action@v3
+        with:
+          userid: 5315789                  # ton user ID AOC
+          session: ${{ secrets.AOC_SESSION }}
+          year: 2025
+          file: 'README.md'                # fichier à mettre à jour
+          starsRegex: '(?<=https:\/\/img\.shields\.io\/badge\/stars%20⭐-)[0-9]+(?=-yellow)'
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "Update AOC stars badge"
+          file_pattern: README.md
