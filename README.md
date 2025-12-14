@@ -1,6 +1,6 @@
 # 🎄 Advent of Code 2025
 
-![](https://img.shields.io/badge/stars%20⭐-0-yellow)
+![](https://img.shields.io/badge/stars%20⭐-24-yellow)
 
 <!--
 **Rubenperes/Rubenperes** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
