@@ -1,5 +1,8 @@
 name: Update AoC Stars Badge
 
+permissions:
+  contents: write
+  
 on:
   schedule:
     - cron: '6 5 1-25 12 *'  # du 1 au 25 décembre à 5:06 UTC
